@@ -36,3 +36,4 @@ build/
 .mypy_cache/
 .pyright/
 
+/src/RegularExpressions/nbproject/private/
