@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Disneyland AFD Validator</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+  <div class="min-h-screen flex items-center justify-center px-4">
+    <div class="bg-white shadow-xl rounded-2xl p-8 w-full max-w-md">
+      <h1 class="text-2xl font-bold mb-4 text-center">Disneyland AFD Validator</h1>
+      <form method="POST" class="space-y-4">
+        <div>
+          <label class="block text-gray-600 mb-1">Expresión regular actual:</label>
+          <input
+            readonly
+            class="w-full border rounded p-2 text-gray-700 bg-gray-100"
+            value="{{ regex }}"
+          >
+        </div>
+        <div>
+          <label for="cadena" class="block text-gray-600 mb-1">Cadena de entrada (sin espacios):</label>
+          <input
+            id="cadena"
+            name="cadena"
+            class="w-full border rounded p-2"
+            placeholder="Ej: haghftshouhx"
+            value="{{ cadena }}"
+            required
+          >
+        </div>
+        <button
+          type="submit"
+          class="w-full bg-blue-600 text-white rounded py-2 hover:bg-blue-700 transition"
+        >Validar</button>
+      </form>
+
+      {% if result %}
+      <div class="mt-4 text-center font-semibold
+        {% if 'ACEPTADA' in result %} text-green-600
+        {% else %} text-red-600
+        {% endif %}">
+        {{ result }}
+      </div>
+      {% endif %}
+
+      <div class="text-xs text-gray-400 mt-6 text-center">@hustavojhon</div>
+    </div>
+  </div>
+
+</body>
+</html>
+

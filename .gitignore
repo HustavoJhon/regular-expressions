@@ -1,0 +1,38 @@
+# Bytecode de Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Entorno virtual
+venv/
+ENV/
+env/
+
+# Archivos de configuración de editor
+.vscode/
+.idea/
+*.swp
+
+# Archivos de sistema
+.DS_Store
+Thumbs.db
+
+# Archivos de logs
+*.log
+
+# Archivos de distribución
+*.egg-info/
+dist/
+build/
+
+# Render y otros
+*.sqlite3
+
+# Carpeta __pycache__ en cualquier parte
+**/__pycache__/
+
+# Archivos de pyright o mypy opcionales
+.mypy_cache/
+.pyright/
+
